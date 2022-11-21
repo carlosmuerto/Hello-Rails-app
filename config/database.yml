@@ -79,8 +79,10 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
+development:
   <<: *default
-  database: Hello_Rails_app_production
+  database: Hello_Rails_app_development
   username: Hello_Rails_app
-  password: <%= ENV["HELLO_RAILS_APP_DATABASE_PASSWORD"] %>
+  password: Hello_Rails_app_pass
+  host: localhost
+  port: 5432
